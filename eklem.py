@@ -9,17 +9,20 @@ import sys
 args =sys.argv
 
 yardim="""
+# eklem
+
 bir veya birden fazla kelimeye baştan veya sondan ekleme yapan python scripti
 bu script bilal alpaslan tarafından yapılmıştır
 
-yardım metni
+yardım metni:
 
-argümanlar:
+    argümanlar:
     
     [eklenecek yön] [eklenecek metin] [işlem yapılacak dosya] [oluşturulacak yeni dosya]
     [eklenecek yön] [eklenecek metin] [işlem yapılacak dosya]
 
     !eğer yazılacak dosya ismi verilmezse cevapCiktisi.txt varsayılan isimdir
+    !eklenecek metinde boşluk gibi karakterleri kullanmak için metni tırnak işareti ile sarınız
 
     yön kullanımları:
 
@@ -46,9 +49,9 @@ argümanlar:
             *deneme3
         ]
     """
-print(len(args))
+
 try:
-    if (args[4] and args[4]!=" "):
+    if(len(args)==5):
         secenek = args[1]
         eklenecekHarfler= args[2]
         dosya = args[3]
@@ -57,14 +60,15 @@ try:
         with open(str(dosya),"r+") as dosya:
             for satir in dosya.readlines():
                 satir=satir[:-1]
-                if (secenek=="-f" or secenek=="-front"):
-                    with open(str(yeniDosya),"a") as dosya:
-                        dosya.write(satir+eklenecekHarfler+"\n")
-                if (secenek=="-b" or secenek=="-back"):
-                    with open(str(yeniDosya),"a") as dosya:
-                        dosya.write(eklenecekHarfler+satir+"\n")
+                if satir!="":
+                    if (secenek=="-f" or secenek=="-front"):
+                        with open(str(yeniDosya),"a") as dosya:
+                            dosya.write(satir+eklenecekHarfler+"\n")
+                    if (secenek=="-b" or secenek=="-back"):
+                        with open(str(yeniDosya),"a") as dosya:
+                            dosya.write(eklenecekHarfler+satir+"\n")
 
-    elif (args[3]):
+    elif(len(args)==4):
         secenek = args[1]
         eklenecekHarfler= args[2]
         dosya = args[3]
@@ -72,13 +76,15 @@ try:
         with open(str(dosya),"r+") as dosya:
             for satir in dosya.readlines():
                 satir=satir[:-1]
-                if (secenek=="-f" or secenek=="-front"):
-                    with open("cevapCiktisi.txt","a") as dosya:
-                        dosya.write(satir+eklenecekHarfler+"\n")
-                if (secenek=="-b" or secenek=="-back"):
-                    with open("cevapCiktisi.txt","a") as dosya:
-                        dosya.write(eklenecekHarfler+satir+"\n")
-    elif(args[1]):
+                if satir!="":
+                    if (secenek=="-f" or secenek=="-front"):
+                        with open("cevapCiktisi.txt","a") as dosya:
+                            dosya.write(satir+eklenecekHarfler+"\n")
+                    if (secenek=="-b" or secenek=="-back"):
+                        with open("cevapCiktisi.txt","a") as dosya:
+                            dosya.write(eklenecekHarfler+satir+"\n")
+
+    elif(len(args)==1):
         secenek = args[1]
         if (secenek=="-h" or secenek=="-help"):
             print(yardim)
