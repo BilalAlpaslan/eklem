@@ -18,11 +18,11 @@ yardım metni:
 
     argümanlar:
     
-    [eklenecek yön] [eklenecek metin] [işlem yapılacak dosya] [oluşturulacak yeni dosya]
-    [eklenecek yön] [eklenecek metin] [işlem yapılacak dosya]
+        [eklenecek yön] [eklenecek metin] [işlem yapılacak dosya] [oluşturulacak yeni dosya]
+        [eklenecek yön] [eklenecek metin] [işlem yapılacak dosya]
 
-    !eğer yazılacak dosya ismi verilmezse cevapCiktisi.txt varsayılan isimdir
-    !eklenecek metinde boşluk gibi karakterleri kullanmak için metni tırnak işareti ile sarınız
+        !eğer yazılacak dosya ismi verilmezse cevapCiktisi.txt varsayılan isimdir
+        !eklenecek metinde boşluk gibi karakterleri kullanmak için metni tırnak işareti ile sarınız
 
     yön kullanımları:
 
