@@ -8,34 +8,34 @@ bu script bilal alpaslan tarafından yapılmıştır
 
 yardım metni:
 
-argümanlar:
-    
-    [eklenecek yön] [eklenecek metin] [işlem yapılacak dosya] [oluşturulacak yeni dosya]
-    [eklenecek yön] [eklenecek metin] [işlem yapılacak dosya]
+    argümanlar:
+        
+        [eklenecek yön] [eklenecek metin] [işlem yapılacak dosya] [oluşturulacak yeni dosya]
+        [eklenecek yön] [eklenecek metin] [işlem yapılacak dosya]
 
-    !eğer yazılacak dosya ismi verilmezse cevapCiktisi.txt varsayılan isimdir
+        !eğer yazılacak dosya ismi verilmezse cevapCiktisi.txt varsayılan isimdir
 
-    yön kullanımları:
+        yön kullanımları:
 
-        -f, -front  :bu kullanım ile yazılan metin her satırın sonuna eklenir
-        -b, -back   :bu kullanım ile yazılan metin her satırın başına eklenir
-        -h, -help   :yardım menüsünü açar
+            -f, -front  :bu kullanım ile yazılan metin her satırın sonuna eklenir
+            -b, -back   :bu kullanım ile yazılan metin her satırın başına eklenir
+            -h, -help   :yardım menüsünü açar
 
-    eklenecek metin kullanımı:
+        eklenecek metin kullanımı:
 
-        boşluk kullanmayın \n \t gibi ifadeler kullanabilirsiniz
+            boşluk kullanmayın \n \t gibi ifadeler kullanabilirsiniz
 
-    örnek kullanım:
+        örnek kullanım:
 
-        deneme.txt=[
-            deneme
-            deneme2
-            deneme3
-        ]
-        python eklem.py -b * deneme.txt
+            deneme.txt=[
+                deneme
+                deneme2
+                deneme3
+            ]
+            python eklem.py -b * deneme.txt
 
-        output cevapCiktisi.txt=[
-            *deneme
-            *deneme2
-            *deneme3
-        ]
+            output cevapCiktisi.txt=[
+                *deneme
+                *deneme2
+                *deneme3
+            ]
