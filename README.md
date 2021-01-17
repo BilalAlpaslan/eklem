@@ -6,7 +6,7 @@ bu script bilal alpaslan tarafından yapılmıştır
 
 
 
-yardım metni
+yardım metni:
 
 argümanlar:
     
