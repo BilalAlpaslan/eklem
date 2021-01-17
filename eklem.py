@@ -46,8 +46,9 @@ argümanlar:
             *deneme3
         ]
     """
+print(len(args))
 try:
-    if (args[4]):
+    if (args[4] and args[4]!=" "):
         secenek = args[1]
         eklenecekHarfler= args[2]
         dosya = args[3]
@@ -55,7 +56,7 @@ try:
 
         with open(str(dosya),"r+") as dosya:
             for satir in dosya.readlines():
-                satir=satir[:-2]
+                satir=satir[:-1]
                 if (secenek=="-f" or secenek=="-front"):
                     with open(str(yeniDosya),"a") as dosya:
                         dosya.write(satir+eklenecekHarfler+"\n")
@@ -70,7 +71,7 @@ try:
 
         with open(str(dosya),"r+") as dosya:
             for satir in dosya.readlines():
-                satir=satir[:-2]
+                satir=satir[:-1]
                 if (secenek=="-f" or secenek=="-front"):
                     with open("cevapCiktisi.txt","a") as dosya:
                         dosya.write(satir+eklenecekHarfler+"\n")
