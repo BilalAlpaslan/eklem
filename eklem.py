@@ -62,11 +62,9 @@ try:
                 satir=satir[:-1]
                 if satir!="":
                     if (secenek=="-f" or secenek=="-front"):
-                        with open(str(yeniDosya),"a") as dosya:
-                            dosya.write(satir+eklenecekHarfler+"\n")
+                        with open(str(yeniDosya),"a") as dosya:dosya.write(satir+eklenecekHarfler+"\n")
                     if (secenek=="-b" or secenek=="-back"):
-                        with open(str(yeniDosya),"a") as dosya:
-                            dosya.write(eklenecekHarfler+satir+"\n")
+                        with open(str(yeniDosya),"a") as dosya:dosya.write(eklenecekHarfler+satir+"\n")
 
     elif(len(args)==4):
         secenek = args[1]
@@ -78,16 +76,12 @@ try:
                 satir=satir[:-1]
                 if satir!="":
                     if (secenek=="-f" or secenek=="-front"):
-                        with open("cevapCiktisi.txt","a") as dosya:
-                            dosya.write(satir+eklenecekHarfler+"\n")
+                        with open("cevapCiktisi.txt","a") as dosya:dosya.write(satir+eklenecekHarfler+"\n")
                     if (secenek=="-b" or secenek=="-back"):
-                        with open("cevapCiktisi.txt","a") as dosya:
-                            dosya.write(eklenecekHarfler+satir+"\n")
+                        with open("cevapCiktisi.txt","a") as dosya:dosya.write(eklenecekHarfler+satir+"\n")
 
     elif(len(args)==1):
         secenek = args[1]
-        if (secenek=="-h" or secenek=="-help"):
-            print(yardim)
+        if (secenek=="-h" or secenek=="-help"):print(yardim)
 
-except:
-    print(yardim)
+except:print(yardim)
